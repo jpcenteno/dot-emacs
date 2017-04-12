@@ -34,5 +34,6 @@
 
 (load "declutter")
 (load "editing")
+(load "style")
 
 (load "lisp")
