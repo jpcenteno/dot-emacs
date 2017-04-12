@@ -35,6 +35,7 @@
 (load "declutter")
 (load "editing")
 (load "style")
+(load "navigation")
 
 (load "lisp")
 (load "web")
