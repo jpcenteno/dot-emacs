@@ -33,3 +33,4 @@
 (add-to-list 'load-path "~/.emacs.d/config/lang")
 
 (load "declutter")
+(load "editing")
