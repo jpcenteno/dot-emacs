@@ -1,10 +1,11 @@
 
-;; package.el config.
+;; package.el config ---------------------------------------------------------
+
 
 (require 'package)
 (package-initialize)
 
-					; Here we define the repos to be used.
+;; Here we define the repos to be used.
 (setq package-archives
       '(("melpa-stable" . "http://stable.melpa.org/packages/")
 	("gnu"          . "https://elpa.gnu.org/packages/")))
@@ -14,16 +15,19 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; use-package for managing dependencies.
+;; use-package ---------------------------------------------------------------
 
-					; Install `use-package` (if not
-					; present)
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
+(eval-when-compile
 
-(require 'use-package)
+  (unless (package-installed-p 'use-package)
+    (package-install 'use-package))
 
-					; Set ":ensure t" for every required
-					; package.
-(setq use-package-always-ensure t)
+  (require 'use-package)
+
+  ;; Ensure every declared dep is installed
+  (setq use-package-always-ensure t))
+
+
+
+
 
