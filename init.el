@@ -27,6 +27,12 @@
   ;; Ensure every declared dep is installed
   (setq use-package-always-ensure t))
 
+;; Navigation ----------------------------------------------------------------
+
+;; Toggle fullscreen:
+(if (display-graphic-p)
+    (global-set-key (kbd "<C-return>") 'toggle-frame-fullscreen))
+
 ;; Evil Mode -----------------------------------------------------------------
 
 (use-package evil
