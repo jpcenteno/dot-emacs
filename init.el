@@ -33,5 +33,13 @@
   :config
   (evil-mode))
 
+;; Looks ---------------------------------------------------------------------
+
+;; Declutter emacs
+(load "~/.emacs.d/config/declutter")
+
+(use-package dracula-theme
+  :config
+  (load-theme 'dracula))
 
 
