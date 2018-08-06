@@ -27,7 +27,11 @@
   ;; Ensure every declared dep is installed
   (setq use-package-always-ensure t))
 
+;; Evil Mode -----------------------------------------------------------------
 
+(use-package evil
+  :config
+  (evil-mode))
 
 
 
