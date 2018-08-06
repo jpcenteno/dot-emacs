@@ -44,4 +44,8 @@
   :config
   (load-theme 'dracula))
 
+;; Lang: Python --------------------------------------------------------------
 
+(use-package elpy
+  :init
+  (add-hook 'python-mode-hook 'elpy-mode))
