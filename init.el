@@ -44,6 +44,14 @@
         helm-recentf-fuzzy-match    t)
   (helm-mode 1))
 
+;; Mac Os --------------------------------------------------------------------
+
+(if (string-equal system-type "darwin")
+    (progn
+  ;; Don't modify the behavior of the right option key so I can
+  ;; write in German or Spanish.
+      (setq ns-right-alternate-modifier 'none)))
+
 ;; Evil Mode -----------------------------------------------------------------
 
 (use-package evil
