@@ -67,10 +67,47 @@
 
 (use-package dracula-theme
   :config
-  (load-theme 'dracula))
+  (load-theme 'dracula)
+  (set-background-color "#222"))
+
+;; System --------------------------------------------------------------------
+
+(defun my/add-to-path-front
+    (dir)
+    "Add a directory 'dir to both the PATH and exec-path"
+    (progn
+      (setenv "PATH" (concat dir ";" (getenv "PATH")))
+      (add-to-list 'exec-path dir)))
+
+; Mac Os: add Brew paths:
+(if (string-equal system-type "darwin")
+    (progn
+      (my/add-to-path-front "/usr/local/sbin")
+      (my/add-to-path-front "/usr/local/bin")))
 
 ;; Lang: Python --------------------------------------------------------------
 
 (use-package elpy
   :init
   (add-hook 'python-mode-hook 'elpy-mode))
+
+;; Lang: Lisp ----------------------------------------------------------------
+
+(use-package paredit)
+
+;;(use-package parinfer
+;;  :ensure t
+;;  :bind (("C-," . parinfer-toggle-mode))
+;;  :init
+;;  (progn
+;;    (setq parinfer-extensions
+;;          '(defaults       ; should be included.
+;;             ;pretty-parens  ; different paren styles for different modes.
+;;             evil))           ; If you use Evil.
+;;             ;smart-tab      ; C-b & C-f jump positions and smart shift with tab & S-tab.
+;;             ;smart-yank))   ; Yank behavior depend on mode.
+;;    (dadd-hook 'clojure-mode-hook #'parinfer-mode)
+;;    (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
+;;    (add-hook 'common-lisp-mode-hook #'parinfer-mode)
+;;    (add-hook 'scheme-mode-hook #'parinfer-mode)
+;;    (add-hook 'lisp-mode-hook #'parinfer-mode)))
