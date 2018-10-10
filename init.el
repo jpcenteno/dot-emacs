@@ -33,14 +33,15 @@
 (use-package helm
   :diminish helm-mode
   :bind (("C-x C-f" . helm-find-files)
-	 ("M-x"     . helm-M-x)
-	 ("C-x b"   . helm-mini) 
-	 ("M-y"     . helm-show-kill-ring)
-	 :map helm-map
-	 ("<tab>"   . helm-execute-persistent-action))
-  :config
+         ("C-p"     . helm-find-files)
+         ("M-x"     . helm-M-x)
+         ("C-x b"   . helm-mini) 
+         ("M-y"     . helm-show-kill-ring)
+         :map helm-map
+         ("<tab>"   . helm-execute-persistent-action))
+  :init
   (setq helm-buffers-fuzzy-matching t
-	helm-recentf-fuzzy-match    t)
+        helm-recentf-fuzzy-match    t)
   (helm-mode 1))
 
 ;; Evil Mode -----------------------------------------------------------------
