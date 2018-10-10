@@ -28,7 +28,7 @@
 
 ;; Toggle fullscreen:
 (if (display-graphic-p)
-    (global-set-key (kbd "<S-return>") 'toggle-frame-fullscreen))
+    (global-set-key (kbd "<s-return>") 'toggle-frame-fullscreen))
 
 (use-package helm
   :diminish helm-mode
