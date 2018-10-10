@@ -44,6 +44,10 @@
         helm-recentf-fuzzy-match    t)
   (helm-mode 1))
 
+(use-package helm-ag
+  :config
+  (setq helm-ag-base-command "rg --nocolor --nogroup --ignore-case"))
+
 ;; Mac Os --------------------------------------------------------------------
 
 (if (string-equal system-type "darwin")
