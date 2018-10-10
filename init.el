@@ -71,14 +71,12 @@
 
 (use-package evil
   :bind (:map evil-normal-state-map
-	 (";" . evil-ex)
+         (";" . evil-ex)
          :map evil-visual-state-map
-	 (";" . evil-ex)
+         (";" . evil-ex)
          :map evil-emacs-state-map
-	 ("<escape>" . evil-normal-state))
-  :config
-  (define-key evil-normal-state-map ";" 'evil-ex)
-  (define-key evil-visual-state-map ";" 'evil-ex)
+         ("<escape>" . evil-normal-state))
+  :init
   (evil-mode))
 
 ;; Looks ---------------------------------------------------------------------
