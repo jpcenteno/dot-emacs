@@ -80,10 +80,20 @@
 ;; Declutter emacs
 (load "~/.emacs.d/config/declutter")
 
+;; Custom theme files
+(add-to-list 'custom-theme-load-path
+	     (expand-file-name "themes" user-emacs-directory))
+
 (use-package dracula-theme
   :config
   (load-theme 'dracula)
   (set-background-color "#222"))
+
+(use-package smart-mode-line
+  :config
+  (setq sml/theme 'atom-one-dark
+	sml/no-confirm-load-theme t)
+  (sml/setup))
 
 ;; System --------------------------------------------------------------------
 
