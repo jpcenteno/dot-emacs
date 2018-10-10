@@ -1,17 +1,14 @@
 
 ;; package.el config ---------------------------------------------------------
 
-
 (require 'package)
 (package-initialize)
 
-;; Here we define the repos to be used.
 (setq package-archives
       '(("melpa-stable" . "http://stable.melpa.org/packages/")
-	("gnu"          . "https://elpa.gnu.org/packages/")))
+        ("gnu"          . "https://elpa.gnu.org/packages/")))
 
-					; Download a copy of the package
-					; archive (only for the first time).
+;; Download a copy of the package archive (only for the first time).
 (when (not package-archive-contents)
   (package-refresh-contents))
 
