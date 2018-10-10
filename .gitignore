@@ -3,6 +3,8 @@
 README.el
 backup.init.el
 custom.el
+/games
+recentf
 
 ## Thanks: https://github.com/github/gitignore/blob/master/Global/Emacs.gitignore
 
