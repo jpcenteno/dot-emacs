@@ -1,5 +1,5 @@
 
-;; package.el config ---------------------------------------------------------
+;; Packages ------------------------------------------------------------------
 
 (require 'package)
 (package-initialize)
@@ -11,8 +11,6 @@
 ;; Download a copy of the package archive (only for the first time).
 (when (not package-archive-contents)
   (package-refresh-contents))
-
-;; use-package ---------------------------------------------------------------
 
 (eval-when-compile
 
